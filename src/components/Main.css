@@ -1,0 +1,54 @@
+/* Fundo animado para toda a página - aplica um gradiente colorido desfocado */
+.app-background {
+  position: fixed;          /* Fica fixo na tela */
+  top: 0;                   /* Posicionado no topo */
+  left: 0;                  /* Posicionado à esquerda */
+  width: 100%;              /* Largura total da tela */
+  height: 100%;             /* Altura total da tela */
+  /* Gradiente com várias cores que criam um fundo bonito */
+  background: linear-gradient(135deg,
+    #667eea 0%,             /* Azul claro no início */
+    #764ba2 25%,            /* Roxo escuro em 25% */
+    #f093fb 50%,            /* Rosa no meio */
+    #f5576c 75%,            /* Vermelho em 75% */
+    #4facfe 100%);          /* Azul claro no final */
+  filter: blur(80px);       /* Desfoque forte para criar efeito suave */
+  opacity: 0.6;             /* Transparência para não sobrepor o conteúdo */
+  z-index: -1;              /* Fica atrás de todos os outros elementos */
+}
+
+/* Estilos globais do body */
+body {
+  min-height: 100vh;        /* Altura mínima de toda a viewport */
+  margin: 0;                /* Remove margem padrão */
+  /* Fontes do sistema para melhor aparência */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Container principal com efeito glassmorphism */
+.main {
+  padding: 30px;                    /* Espaçamento interno */
+  background: rgba(255, 255, 255, 0.95);  /* Fundo branco semi-transparente */
+  backdrop-filter: blur(20px);      /* Efeito de desfoque atrás do elemento */
+  border-radius: 20px;              /* Bordas arredondadas */
+  max-width: 500px;                 /* Largura máxima */
+  margin: 50px auto;                /* Centralize na tela com margem */
+  /* Sombras para dar profundidade - múltiplas sombras para efeito mais rico */
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.12),     /* Sombra principal */
+    0 0 0 1px rgba(255, 255, 255, 0.05); /* Borda sutil */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borda semi-transparente */
+}
+
+/* Título principal */
+.main h1{
+  font-size: 28px;          /* Tamanho da fonte */
+  text-align: center;       /* Centralizado */
+  color: #2d3748;           /* Cor cinza escura */
+  font-weight: 700;         /* Negrito */
+  margin-bottom: 0;         /* Remove margem inferior */
+}
+
+
+
+

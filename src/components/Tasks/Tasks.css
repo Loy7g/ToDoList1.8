@@ -1,0 +1,42 @@
+/* CSS simplificado para funcionamento correto do drag */
+
+.tarefas {
+  margin-top: 24px;
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 0 0 8px; /* espaço entre itens */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  color: #2d3748;
+  cursor: grab;
+  user-select: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* NÃO sobrescrever transform durante o drag */
+.task-item.dragging, .task-item[data-rfd-dragging] {
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border-color: #cbd5e0;
+  cursor: grabbing;
+}
+
+.task-text { flex: 1; margin-right: 12px; word-break: break-word; }
+
+.acoes { display: flex; gap: 8px; }
+
+.acoes svg { font-size: 20px; cursor: pointer; transition: color .2s ease; }
+.edit { color: #2f855a; }
+.edit:hover { color: #276749; }
+.delete { color: #c53030; }
+.delete:hover { color: #9b2c2c; }

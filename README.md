@@ -1,70 +1,151 @@
-# Getting Started with Create React App
+# 📝 Lista de Tarefas - React TypeScript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Uma aplicação moderna de lista de tarefas desenvolvida com React, TypeScript e drag-and-drop, convertida de JavaScript para TypeScript com hooks personalizados.
 
-## Available Scripts
+## ✨ Funcionalidades
 
-In the project directory, you can run:
+- ✅ **Adicionar tarefas** - Interface limpa para criar novas tarefas
+- ✏️ **Editar tarefas** - Clique no ícone de edição para modificar tarefas existentes
+- 🗑️ **Excluir tarefas** - Remove tarefas indesejadas com um clique
+- 🔄 **Reordenar por drag & drop** - Arraste e solte tarefas para reorganizar
+- 💾 **Persistência local** - Dados salvos automaticamente no localStorage
+- 🚫 **Prevenção de duplicatas** - Impede a criação de tarefas com texto idêntico
+- 🎨 **Interface moderna** - Design glassmorphic com efeito blur
+- 📱 **Layout responsivo** - Funciona bem em diferentes tamanhos de tela
 
-### `npm start`
+## �️ Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React 19.1.1** - Biblioteca principal para interface
+- **TypeScript** - Tipagem estática para melhor desenvolvimento
+- **@hello-pangea/dnd** - Funcionalidade de drag and drop
+- **React Icons** - Ícones para edição e exclusão
+- **CSS3** - Estilização moderna com efeitos visuais
+- **Create React App** - Configuração e build do projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🏗️ Arquitetura do Projeto
 
-### `npm test`
+```
+src/
+├── components/
+│   ├── Main.tsx          # Componente principal da aplicação
+│   ├── Main.css          # Estilos do componente principal
+│   ├── Form/
+│   │   ├── Index.tsx     # Formulário para adicionar/editar tarefas
+│   │   └── Form.css      # Estilos do formulário
+│   └── Tasks/
+│       ├── Index.tsx     # Lista de tarefas com drag & drop
+│       └── Tasks.css     # Estilos da lista de tarefas
+├── hooks/
+│   ├── useLocalStorage.ts # Hook para persistência no localStorage
+│   └── useTarefas.ts     # Hook customizado para lógica das tarefas
+├── types/
+│   └── index.ts          # Definições de tipos TypeScript
+├── App.tsx               # Componente raiz da aplicação
+└── index.tsx             # Ponto de entrada da aplicação
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## � Como Executar
 
-### `npm run build`
+### Pré-requisitos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (versão 16 ou superior)
+- npm ou yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Instalação
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone o repositório**
+   ```bash
+   git clone <url-do-repositorio>
+   cd projetostreinandoreact
+   ```
 
-### `npm run eject`
+2. **Instale as dependências**
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Execute o projeto**
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Acesse a aplicação**
+   - Acesse http://localhost:3000 no seu navegador
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Scripts Disponíveis
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `npm start` - Executa a aplicação em modo de desenvolvimento
+- `npm run build` - Cria build de produção
+- `npm test` - Executa os testes
+- `npm run eject` - Ejeta a configuração do CRA (irreversível)
 
-## Learn More
+## 🔧 Funcionalidades Técnicas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Hooks Personalizados
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **useLocalStorage**: Gerencia persistência automática no localStorage
+- **useTarefas**: Encapsula toda lógica de CRUD das tarefas
 
-### Code Splitting
+### Drag & Drop
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Implementado com `@hello-pangea/dnd`
+- Portal rendering para evitar conflitos com CSS
+- Reordenação visual e funcional das tarefas
 
-### Analyzing the Bundle Size
+### TypeScript
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Tipagem completa da aplicação
+- Interfaces para props e estados
+- Compilação com verificação de tipos rigorosa
 
-### Making a Progressive Web App
+## 🎨 Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Tema**: Glassmorphism com gradiente roxo-azul
+- **Tipografia**: Sistema de fontes nativo
+- **Interações**: Hover effects e transições suaves
+- **Responsividade**: Design adaptativo para diferentes dispositivos
 
-### Advanced Configuration
+## 📝 Migração JavaScript → TypeScript
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Este projeto foi migrado de JavaScript para TypeScript incluindo:
 
-### Deployment
+- ✅ Conversão de componentes de classe para funcionais com hooks
+- ✅ Adição de tipagem completa (Props, State, Events)
+- ✅ Criação de hooks personalizados
+- ✅ Configuração do tsconfig.json
+- ✅ Refatoração da arquitetura com melhor separação de responsabilidades
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## � Resolução de Problemas
 
-### `npm run build` fails to minify
+### Drag & Drop
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Se as tarefas não arrastarem corretamente:
+- Verifique se não há zoom no navegador (deve estar em 100%)
+- Limpe o cache do navegador
+- Certifique-se de que JavaScript está habilitado
+
+### LocalStorage
+
+Os dados são salvos automaticamente. Se não persistirem:
+- Verifique se o localStorage não está desabilitado
+- Tente limpar dados antigos: `localStorage.clear()`
+
+## 🤝 Contribuindo
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+
+## 👨‍💻 Autor
+
+Desenvolvido com ❤️ durante o aprendizado de React e TypeScript.
+
+---
+
+⭐ Se este projeto te ajudou, considere dar uma estrela no repositório!
